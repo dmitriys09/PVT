@@ -1,0 +1,20 @@
+dgemm_def:
+$ perf stat -e cache-misses ./dgemm
+Elapsed time: 0.964663 sec.
+
+ Performance counter stats for './dgemm':
+
+         2 166 428      cache-misses:u                                              
+
+       3,319047253 seconds time elapsed
+
+dgemm_transpose:
+
+$ perf stat -e cache-misses ./dgemm
+Elapsed time: 0.530589 sec.
+
+ Performance counter stats for './dgemm':
+
+         1 572 756      cache-misses:u                                              
+
+       2,019749926 seconds time elapsed
